@@ -1,7 +1,7 @@
 //Job application routes
 const express = require('express');
-const { addJob, getFilteredJobs, deleteJob, updateJobStatus} = require('../controllers/jobController');
-const authMiddleware = require('../controllers/middleware/authMiddleware');
+const { addJob, getFilteredJobs, deleteJob, updateJobStatus } = require('../controllers/jobController');
+const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
