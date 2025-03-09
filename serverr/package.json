@@ -1,0 +1,26 @@
+{
+  "name": "serverr",
+  "version": "1.0.0",
+  "description": "Job application tracker backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "keywords": [
+    "js",
+    "nodeJs",
+    "mongoDB"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0",
+    "validator": "^13.12.0"
+  }
+}
