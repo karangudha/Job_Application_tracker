@@ -2,7 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler";
 import { ApiError } from "../utils/apiError";
 import { ApiResponse } from "../utils/apiResponse";
 import { User } from "../models/user.model.js";
-import mongoose from "mongoose";
+
 
 const generateAccessTokenAndRefreshToken = async (userId) => {
     try {
@@ -286,32 +286,32 @@ const updateDetails = asyncHandler(async (req, res) => {
 })
 
 const getAllUsers = asyncHandler(async (req, res) => {
-    const { userId } = req.params;
+    // const { userId } = req.params;
 
-    const users = await User.aggregate([
-        {
-            $match: {
-                _id: new mongoose.Types.ObjectId(userId)
-            }
-        },
-        {
-            $project: {
-                _id: 1,
-                name: 1,
-                lastName: 1,
-            }
-        }
-    ])
+    // const users = await User.aggregate([
+    //     {
+    //         $match: {
+    //             _id: new mongoose.Types.ObjectId(userId)
+    //         }
+    //     },
+    //     {
+    //         $project: {
+    //             _id: 1,
+    //             name: 1,
+    //             lastName: 1,
+    //         }
+    //     }
+    // ])
 
-    if (!users?.length) {
-        throw new ApiError(404, "User not found")
-    }
+    // if (!users?.length) {
+    //     throw new ApiError(404, "User not found")
+    // }
 
-    return res
-        .status(200)
-        .json(
-            new ApiResponse(200, users[0], "All users fetched successfully")
-        )
+    // return res
+    //     .status(200)
+    //     .json(
+    //         new ApiResponse(200, users[0], "All users fetched successfully")
+    //     )
 })
 
 export {
