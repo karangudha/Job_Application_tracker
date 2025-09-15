@@ -1,1 +1,1 @@
-Job allpication tacker is an web application, which developed with the idea to help users to track and manage there job application with feaure like addition, deletion job, update job status etc.
+A job application tracker is a web application developed with the idea of helping users track and manage their job applications, featuring functions such as adding, deleting jobs, and updating job status.
